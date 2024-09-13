@@ -188,7 +188,7 @@ function displayData() {
     phone.innerHTML = data.phone;
     email.innerHTML = data.email;
     url.innerHTML = data.url;
-    imagecontainer.src = localStorage.getItem('image') || "https://avatars.githubusercontent.com/u/130893009?v=4";
+    imagecontainer.src = localStorage.getItem('image') || "https://cdn-icons-png.flaticon.com/512/149/149071.png";
     let skilldata: string[] = data.skills.split(',');
 
 
