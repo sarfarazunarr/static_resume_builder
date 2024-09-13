@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Resume in a minute!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="intro">
+        <!-- Intro Section -->
+        <section id="start" class="start">
+            <h1>Get Your Resume Instantly!</h1>
+            <p>Wants to generate a resume quickly? Just click on the button to start now.</p>
+            <button onclick="nextSection('form', 'start')">Get Resume</button>
+        </section>
+        <!-- Form Section -->
+        <section id="form" class="start intro hidden">
+            <h1>Fill Form to Continue!</h1>
+            <div id="form">
+                <!-- Section Personal Informatin -->
+                <div id="basic_info">
+                    <h3>Basic Information</h3>
+                    <div>
+                        <input type="text" name="name" id="name" placeholder="Enter Name">
+                        <input type="text" name="role" id="role" placeholder="Enter Role">
+                    </div>
+                    <textarea name="coverletter" id="coverletter" cols="30"
+                        rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus incidunt officia enim similique temporibus culpa nam amet deleniti esse quaerat nulla, alias, a cumque molestias! Fugiat sequi non nulla rem distinctio adipisci alias dolores dicta enim incidunt aliquam amet accusantium consequatur omnis similique sunt, maxime velit. Repellat natus suscipit possimus?</textarea>
+                    <input type="file" name="image" id="image" accept="image/*" onchange="getImage()">
+
+                    <button onclick="nextSection('contact_section', 'basic_info')">Next</button>
+                </div>
+                <div id="contact_section" class="hidden">
+                    <h3>Contact and Skills Information</h3>
+                    <div style="display: flex; flex-direction: column;">
+                        <input type="text" name="phone" id="phone" placeholder="Enter Phone Number">
+                        <input type="email" name="email" id="email" placeholder="Enter Email">
+                        <input type="url" name="url" id="url" placeholder="Enter Website/Portfolio/Linkedin Url">
+                    </div>
+                    <textarea name="Skills" id="skills" cols="30" rows="10"
+                        placeholder="Enter Skills e.g Graphic Design, Web Development..."></textarea>
+                    <div>
+                        <button onclick="nextSection('basic_info', 'contact_section')">Back</button>
+                        <button onclick="nextSection('education', 'contact_section')">Next</button>
+                    </div>
+                </div>
+                <div id="education" class="hidden">
+                    <p>Education</p>
+                    <div>
+                        <input type="text" name="degree" style="width: 15%;" id="degree"
+                            placeholder="Enter Degree / Course Name" value="abc">
+                        <input type="text" name="institute" style="width: 50%;" id="institute"
+                            placeholder="Enter Institute" value="abc">
+                        <input type="text" name="year" id="year" style="width: 12%;" placeholder="Passing Year!"
+                            value="123">
+                        <button onclick="addEducation()">+</button>
+                    </div>
+                    <div>
+                        <ul id="edu_preview" class="preview">
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <button onclick="nextSection('contact_section', 'education')">Back</button>
+                        <button onclick="nextSection('experience', 'education')">Next</button>
+                    </div>
+                </div>
+                <div id="experience" class="hidden">
+                    <p>Experience</p>
+                    <div>
+                        <input type="text" name="role" id="exp_role" placeholder="Enter Role" value="frontend">
+                        <input type="text" name="company" id="company" placeholder="Enter Company" value="abc">
+                        <input type="text" name="daterange" id="daterange" placeholder="Enter Months..." value="123">
+                        <button onclick="addExperience()">+</button>
+                    </div>
+                    <div>
+                        <ul id="exp_preview" class="preview">
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <button onclick="nextSection('education', 'experience')">Back</button>
+                        <button id="create">Start Creating -></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Resume Section -->
+    <section id="resume" class="hidden">
+        <div class="header">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT16eO5W8VPjVFrkvG8n_2FQKjByMcbLtBF4A&s"
+                alt="userimage" id="userimage">
+            <h1 id="username" contenteditable="true"><span id="userrole" contenteditable="true"></span></h1>
+            <ul>
+                <li>Contact: <span id="usercontact" contenteditable="true"></span></li>
+                <li>Email: <span id="useremail" contenteditable="true"></span></li>
+                <li><span id="userwebsite" contenteditable="true"></span></li>
+            </ul>
+        </div>
+
+        <div class="details">
+            <div>
+                <h3>Cover Letter</h3>
+                <p id="usercoverletter" contenteditable="true" spellcheck="false">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam laudantium
+                    enim odit! Et incidunt accusamus saepe corrupti velit doloribus error quidem fuga temporibus
+                    adipisci autem, rerum eum magnam dignissimos veritatis cupiditate. Harum quasi iusto nihil placeat
+                    ab ut dolorum ipsa sapiente dolore deleniti, vitae quas quam quidem nemo! Recusandae, voluptates?
+                </p>
+            </div>
+            <div>
+                <h3>Skills</h3>
+                <ul id="userskills" >
+                </ul>
+            </div>
+            <div>
+                <h3>Education</h3>
+                <div class="data_container" id="usereducation">
+                    
+                </div>
+            </div>
+            <div>
+                <h3>Experience</h3>
+                <div class="data_container" id="userexpereince">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div id="mini_menu">
+            <button onclick="printPage()">Print</button>
+            <button onclick="shareLink()">Share</button>
+            <button onclick="proEditing(event)">Pro Editing (Disabled)</button>
+            <button onclick="localStorage.removeItem('data'); location.href = '/'">Delete</button>
+        </div>
+    </section>
+</body>
+<script src="main.js"></script>
+
+</html>

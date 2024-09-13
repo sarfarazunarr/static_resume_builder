@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "ES2022",                             /* Use modern JavaScript syntax (ES2022). */
+    "lib": ["dom", "ES2022"],                       /* Include DOM and ES2022 libraries for browser compatibility. */
+
+    /* Modules */
+    "module": "ESNext",                             /* Use ESNext module system for modern JavaScript modules. */
+    "moduleResolution": "node",                     /* Resolve modules using Node.js module resolution strategy. */
+
+    /* Interop Constraints */
+    "esModuleInterop": true,                        /* Emit extra code for CommonJS compatibility. */
+
+    /* Other Compiler Options */
+    "forceConsistentCasingInFileNames": true,       /* Ensure consistent casing in file names. */
+    "strict": true,                                 /* Enable strict type-checking. */
+    "skipLibCheck": true                            /* Skip type checking of declaration files. */
+  },
+  "include": [
+    "./main.ts"                                     /* Include your TypeScript files. */
+  ]
+}
