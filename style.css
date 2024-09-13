@@ -267,3 +267,15 @@ body{
 .hidden{
     display: none !important;
 }
+
+@media (max-width:767px){
+    .start{
+        width: 90%;
+    }
+    #resume .header{
+        width: 90vw;
+    }
+    #resume .details{
+        width: 86vw;
+    }
+}
