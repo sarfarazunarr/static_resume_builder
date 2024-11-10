@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/resume2.css">
+    <script src="/script/resume.js"></script>
+    <title>Resume Editor - ResumLine!</title>
+</head>
+
+<body>
+    <nav>
+        <h1 onclick="window.location.assign('/')">ResumLine</h1>
+        <div class="buttonArea">
+            <button id="editingbtn" popoverTarget="popup" onclick="enableEditing()">Enable Editing</button>
+            <button id="editingprobtn" onclick="enableproEditing()">Enable Pro Editing</button>
+            <button id="editingprobtn" onclick="generatePDF()">Download</button>
+            <button id="editingprobtn" onclick="clearData()">Clear Data</button>
+        </div>
+    </nav>
+    <div id="resume">
+        <div id="main_content">
+            <div class="left_area">
+                <div class="img_section">
+                    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" width="200px" height="200px"
+                        id="pic" alt="">
+                </div>
+                <div class="section">
+                    <div class="heading_area_secondary">
+                        <h1>Contact. </h1>
+                        <div class="line"></div>>
+                    </div>
+                    <ul class="contact_list">
+                        <li><img src="https://www.svgrepo.com/show/474032/call.svg" width="25px" height="25px"
+                                alt="logo" /> <span id="phone">Mobile Number</span></li>
+                        <li><img src="https://www.svgrepo.com/show/474042/email.svg" width="25px" height="25px"
+                                alt="logo" /> <span id="email">Email</span></li>
+                        <li><img src="https://www.svgrepo.com/show/474056/home-door.svg" width="25px" height="25px"
+                                alt="logo" /> <span id="address">Address</span></li>
+                        <li><img src="https://www.svgrepo.com/show/474067/message.svg" width="25px" height="25px"
+                                alt="logo" /> <span id="portfolio_url">Portfolio url</span></li>
+                        <li><img src="https://www.svgrepo.com/show/453962/linkedin.svg" width="25px" height="25px"
+                                alt="logo" /> <span id="linkedin">Linkedin URL</span></li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <div class="heading_area_secondary">
+                        <h1>About. </h1>
+                        <div class="line"></div>>
+                    </div>
+                    <p class="content" id="summary" style="color: white">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut officiis doloribus nostrum! Sequi
+                        eaque hic fugit praesentium officia, id ducimus eveniet doloremque recusandae quas eligendi.
+                        Provident reprehenderit, velit fugiat, tempore nisi modi atque laborum officia quisquam a saepe
+                        nostrum impedit.
+                    </p>
+                </div>
+                <div class="section">
+                    <div class="heading_area_secondary">
+                        <h1>Skills. </h1>
+                        <div class="line"></div>>
+                    </div>
+                    <ul id="skills" style="color: white">
+                        <li>Hello</li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <div class="heading_area_secondary">
+                        <h1>REFERENCE. </h1>
+                        <div class="line"></div>>
+                    </div>
+                    <P class="content" style="color: white">Will be available</P>
+                </div>
+            </div>
+            <div class="right_area">
+                <div class="name_area">
+                    <h1 id="name">Name</h1>
+                    <div class="heading_area_primary">
+                        <h2 id="role"></h2>
+                    </div>
+                </div>
+
+                <div style="padding-top: 10px;">
+                    <div class="heading_area_primary">
+                        <h3>Work Expereince. </h3>
+                        <div class="line"></div>
+                    </div>
+                    <div id="experience">
+                    </div>
+                </div>
+                <div style="padding-top: 10px;">
+                    <div class="heading_area_primary">
+                        <h3>Education. </h3>
+                        <div class="line"></div>
+                    </div>
+                    <div id="education">
+                    </div>
+                </div>
+                <div style="padding-top: 10px;">
+                    <div class="heading_area_primary">
+                        <h3>CERTIFICATES. </h3>
+                        <div class="line"></div>
+                    </div>
+                    <ul id="certificates">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</html>

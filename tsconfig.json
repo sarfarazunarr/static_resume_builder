@@ -17,6 +17,8 @@
     "skipLibCheck": true                            /* Skip type checking of declaration files. */
   },
   "include": [
-    "./main.ts"                                     /* Include your TypeScript files. */
+    // "script/main.ts",                                   
+    "script/script.ts",                                  /* Include your TypeScript files. */
+    "script/resume.ts"                                     /* Include your TypeScript files. */
   ]
 }

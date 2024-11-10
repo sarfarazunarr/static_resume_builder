@@ -1,0 +1,491 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgb(20, 20, 20);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(48, 48, 48);
+    border-radius: 10px;
+}
+
+:root{
+    --primary: #120237;
+    --lightwhite: #FFFBFB;
+    --lightdark: #545454;
+    --fulldark: #141414;
+}
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    scroll-behavior: auto;
+}
+#hero {
+    width: 100vw;
+    padding: 60px;
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#hero_1{
+    width: 60%;
+}
+#hero_2{
+    width: 40%;
+}
+#hero h1 {
+    font-size: 60px;
+    color: white;
+    font-weight: bold;
+    font-family: "Outfit";
+}
+
+#hero p {
+    font-size: 20px;
+    color: var(--lightwhite);
+    font-family: "Outfit";
+}
+
+.hero_img {
+    width: 500px;
+    height: 400px;
+    object-fit: contain;
+    margin-right: -10px;
+}
+
+#hero_1 button {
+    padding: 15px 20px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background: white;
+    color: var(--primary);
+    font-family: "Inter";
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+#hero_1 button:hover{
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+}
+
+#hero_1 button img{
+    width: 25px;
+}
+#hero_1 button:hover ~ #hero_1 button img {
+    width: 25px;
+    background-color: white;
+}
+.highlight {
+    position: relative;
+    color: white; /* Change this color as needed */
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 60px;
+    width: 100%;
+    height: 8px;
+    background-color: #d0a806ca;
+}
+
+/* Resume Template Section */
+#templates_section {
+    width: 100vw;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+#templates_section h1{
+    color: var(--primary);
+    font-size: 50px;
+    margin-bottom: 0px;
+    font-family: "Outfit";
+}
+#templates_section p{
+    color: var(--lightdark);
+    font-family: "Inter";
+}
+
+#templates{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 20px 10px;
+    margin-bottom: 30px;
+}
+.template{
+    width: 230px;
+    height: 330px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 10px 10px gray;
+}
+#contribution{
+    width: 100vw;
+    height: 420px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--primary);
+    padding: 20px 0px;
+}
+#contribution h1{
+    text-align: center;
+    font-size: 50px;
+    width: 660px;
+    margin-bottom: 5px;
+    font-family: "Outfit";
+    color: white;
+}
+#contribution p{
+    width: 600px;
+    text-align: center;
+    font-family: "Inter";
+    color: var(--lightwhite);
+}
+#contribution button {
+    font-family: "Outfit";
+    background-color: transparent;
+    border: 2px solid white;
+    font-size: 20px;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+#contribution button:hover {
+    background-color: white;
+    border: 2px solid transparent;
+    color: var(--primary);
+}
+
+footer {
+    background-color: var(--fulldark);
+    padding: 5px 10px;
+    color: white;
+    font-size: 10px;
+    font-family: "Outfit";
+    display: flex;
+    justify-content: space-between;
+}
+
+#ask {
+    width: 50vw;
+    padding: 10px;
+    background-color: rgb(22, 22, 22);
+    box-shadow: 2px 10px 10px hsla(0, 1%, 17%, 0.607);
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+}
+#ask h2{
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    font-family: "Outfit";
+    text-align: center;
+    padding: 20px 0px;
+} 
+
+.cards_section {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.cards {
+    width: 500px;
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.1s ease-in-out;
+    text-decoration: none;
+}
+#ask .cards:hover{
+    background-color: var(--primary);
+    box-shadow: 5px 10px 10px black;
+}
+#ask .cards h2 {
+    padding: 5px;
+    text-align: center;
+    color: white;
+    padding-bottom: 0px;
+    font-size: 25px;
+}
+#ask .cards p {
+    text-align: center;
+    color: white;
+    padding-top: 5px;
+    font-size: 15px;
+    font-family: "Inter";
+}
+
+/* Form Page CSS */
+.formPage {
+    width: 100vw;
+    height: auto;
+    background-color: var(--fulldark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.formPage h1{
+    font-size: 40px;
+    color: white;
+    font-family: "Outfit";
+    text-align: center;
+}
+#formArea {
+    width: 30%;
+    padding: 5px;
+    overflow-x: hidden;
+}
+.input_area{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    justify-items: start;
+    gap: 10px 0px;
+    margin: 20px 0px;
+}
+.input_area label{
+    font-size: 30px;
+    font-family: "Inter";
+    color: rgb(182, 182, 182);
+}
+.input_area input, textarea{
+    padding: 20px;
+    border: 1px solid rgb(182, 182, 182);
+    color: rgb(182, 182, 182);
+    width: 90%;
+    font-size: 28px;
+    font-family: "Inter";
+    background-color: transparent;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    caret-color: rgb(255, 244, 32);
+}
+.input_area input:focus, textarea:focus{
+    border: 1px solid rgb(255, 244, 32);
+    color: rgb(255, 244, 32);
+}
+#formArea .buttonArea{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#formArea button[type="button"] {
+    padding: 10px 40px;
+    background-color: white;
+    color: black;
+    font-family: "Outfit";
+    font-size: 20px;
+    border: 2px solid transparent;
+    outline: none;
+}
+#formArea button[type="button"]:hover {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+#formArea .final{
+    background-color: rgb(14, 151, 14) !important;
+    color: white !important;
+
+}
+#formArea .final:hover{
+    background-color: black !important;
+    color: white !important;
+
+}
+
+.table {
+    table-layout: auto;
+    border: 2px solid white;
+    color: white;
+    width: 100%;
+    margin: 20px 0px;
+}
+.table thead tr{
+    background: white;
+    color: black;
+    font-family: "Outfit";
+    font-size: 25px;
+}
+.table thead tr td{
+    background: white;
+    color: black;
+    font-family: "Outfit";
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    padding: 10px 5px;
+}
+.table tbody tr{
+    background-color: transparent;
+    color: white;
+    padding: 10px 5px;
+}
+
+.table tbody tr td{
+    background: black;
+    color: white;
+    font-family: "Outfit";
+    font-size: 15px;
+    text-align: center;
+    border: none;
+    padding: 5px 2.5px;
+}
+
+.delete {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    color: white;
+    outline: none;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+}
+#img_preview{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 2px solid white;
+    margin: 10px auto;
+}
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width: 480px) {
+    #hero{
+        width: 100vw;
+        flex-direction: column;
+        padding: 20px;
+        gap: 0;
+    }
+    #hero_1{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+    #hero_2{
+        display: none;
+    }
+    #hero h1{
+        font-size: 50px;
+        text-align: center;
+    }
+    #hero p{
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+    }
+    #templates_section {
+        width: 100vw;
+        padding: 20px;
+    }
+    #templates_section h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    #templates{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    #contribution{
+        width: 100vw;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    #contribution h1{
+        font-size: 40px;
+        text-align: center;
+        width: 100vw;
+    }
+    #contribution p{
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+        color: white;
+    }
+    #contribution button{
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+    footer{
+        width: 100vw;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    footer p{
+        color: white;
+        font-size: 18px;
+        text-align: center;
+    }
+    #ask {
+        width: 95vw;
+        background-color: rgba(27, 27, 27, 0.582);
+        backdrop-filter: blur(10px);
+    }
+    .cards_section{
+        width: 100%;
+        padding-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cards{
+        width: 80%;
+    }
+    #formArea{
+        width: 90%;
+    }
+    .formPage h1{
+        font-size: 40px;
+        color: white;
+        font-family: "Outfit";
+        text-align: center;
+    }
+    .input_area label{
+        font-size: 25px;
+    }
+    .input_area input, textarea{
+        padding: 10px;
+        font-size: 25px;
+    }
+    #formArea button[type="button"]{
+        padding: 10px 20px;
+    }
+}

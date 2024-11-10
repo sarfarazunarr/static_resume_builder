@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Faculty+Glyphic&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background-color: rgb(48, 48, 48);
+}
+
+nav {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(48, 48, 48);
+}
+
+nav h1 {
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+nav .buttonArea {
+    display: flex;
+    gap: 10px;
+}
+
+nav .buttonArea button {
+    padding: 10px 40px;
+    color: black;
+    font-family: "Outfit";
+    font-size: 20px;
+    border: 2px solid transparent;
+    outline: none;
+}
+
+nav .buttonArea button:hover {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+#resume {
+    width: 216mm; 
+    min-height: 279mm; 
+    margin: 0 auto;
+    background-color: white;
+    padding: 10px 20px;
+}
+
+#intro_area {
+    width: 100%;
+    display: flex;
+    padding: 30px 40px;
+    justify-content: space-between;
+    background-color: rgb(214, 214, 214);
+    border-radius: 20px;
+}
+
+#intro_area .name_area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: inherit;
+    gap: 10px;
+    padding: 10px 20px;
+}
+
+#intro_area .name_area h1 {
+    background: inherit;
+    font-size: 40px;
+    color: rgb(18, 18, 18);
+    font-family: "Hubot Sans";
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#intro_area .name_area h2 {
+    background: inherit;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: rgb(80, 80, 80);
+    font-family: "Faculty Glyphic";
+    text-transform: uppercase;
+}
+
+#intro_area .img_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(214, 214, 214);
+    justify-content: end;
+    position: relative;
+}
+
+#intro_area .img_section img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    position: absolute;
+    top: 20px;
+}
+
+#main_content {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    margin-top: 60px;
+    padding: 20px;
+}
+
+#main_content .left_area {
+    grid-column: span 3;
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    word-break: break-all;
+    gap: 10px;
+}
+
+.contact_list {
+    list-style-type: none;
+    font-size: 15px;
+    font-family: "Hubot Sans";
+    color: black;
+    overflow-wrap: break-word;
+    padding: 10px 0px 10px 10px;
+}
+
+.contact_list li {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.section_heading {
+    font-size: 35px;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 5px;
+    font-family: "Outfit";
+    padding: 10px 0px;   
+}
+
+.content {
+    font-size: 15px;
+    color: rgb(48, 48, 48);
+    letter-spacing: 2px;
+    font-family: "Faculty Glyphic";
+}
+
+/* Right Area */
+#main_content .right_area {
+    grid-column: span 5;
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-left: 1px solid rgb(201, 199, 199);
+}
+
+#skills, #certificates {
+    margin-left: 40px;
+    list-style-type: decimal-leading-zero;
+}
+
+#skills li, #certificates li {
+    font-family: "Lato";
+    font-size: 18px;
+    color: rgb(18, 18, 18);
+    padding: 3px 0px;
+}
+
+#education {
+    margin: 20px 10px;
+}
+
+.givememargin {
+    margin: 10px 0px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(201, 199, 199);
+}
+
+.mini_card {
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    gap: 8px;
+    padding: 10px 0px;
+}
+
+.mini_card h2 {
+    font-family: "Lato";
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.mini_card p {
+    font-family: "Inter";
+    font-size: 18px;
+    color: rgb(48, 48, 48);
+}
+
+.mini_card .date {
+    font-weight: 700;
+}
+
+@media screen and (max-width: 480px) {
+    nav{
+        width: 100%;
+        justify-content: space-between;
+    }
+    nav h1{
+        font-size: 50px;
+        text-align: center;
+    }
+    
+    .buttonArea{
+        display: flex;
+
+    }
+    nav .buttonArea button{
+        padding: 10px 30px;
+        font-size: 12px;
+    }
+}

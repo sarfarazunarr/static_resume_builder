@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/main.css">
+    <script src="../script/script.js"></script>
+
+    <title>Create with Form</title>
+</head>
+
+<body class="formPage">
+    <h1>Create Resume with Form</h1>
+    <div id="formArea">
+        <div id="area_1">
+            <div class="input_area">
+                <label for="name">Name</label>
+                <input type="text" name="name" autocomplete="name" id="name" placeholder="John Doe">
+            </div>
+            <div class="input_area">
+                <label for="role">Role</label>
+                <input type="text" name="userrole" id="userrole" placeholder="Web Developer">
+            </div>
+            <button type="button" onclick="nextSection('area_2', 'area_1')">Next</button>
+        </div>
+        <div id="area_2" class="hidden">
+            <div class="input_area">
+                <label for="email">Email</label>
+                <input type="email" name="email" autocomplete="email" id="email" placeholder="hello@email.com">
+            </div>
+            <div class="input_area">
+                <label for="phone">Phone Number</label>
+                <input type="text" name="phone" id="phone" placeholder="+92 301 2345678">
+            </div>
+            <div class="input_area">
+                <label for="url">Portfolio / Website URL</label>
+                <input type="url" name="url" id="portfoliourl" placeholder="https://mysite.com">
+            </div>
+            <div class="buttonArea">
+                <button type="button" onclick="nextSection('area_1', 'area_2')">Back</button>
+                <button type="button" onclick="nextSection('area_3', 'area_2')">Next</button>
+            </div>
+        </div>
+        <div id="area_3" class="hidden">
+            <div class="input_area">
+                <label for="linkedin">Linkedin Profile</label>
+                <input type="url" name="linkedin" id="linkedin" placeholder="https://linkedin.com/in/yourhandle">
+            </div>
+            <div class="input_area">
+                <label for="address">Address</label>
+                <textarea name="address" id="address" rows="3" cols="6"></textarea>
+            </div>
+            <div class="buttonArea">
+                <button type="button" onclick="nextSection('area_2', 'area_3')">Back</button>
+                <button type="button" onclick="nextSection('area_4', 'area_3')">Next</button>
+            </div>
+        </div>
+        <div id="area_4" class="hidden">
+            <div class="input_area">
+                <label for="summary">Professional Summary</label>
+                <textarea name="summary" id="summary" rows="6" cols="6"></textarea>
+            </div>
+            <div class="buttonArea">
+
+                <button type="button" onclick="nextSection('area_3', 'area_4')">Back</button>
+                <button type="button" onclick="nextSection('area_5', 'area_4')">Next</button>
+            </div>
+        </div>
+        <div id="area_5" class="hidden">
+
+            <h2 style="font-size: 30px; color: white; font-family: 'Outfit';">Education</h2>
+            <div class="input_area">
+                <label for="degree">Degree</label>
+                <input type="text" name="degree" id="degree" placeholder="Bachelor of Science in Computer Science">
+                <label for="institute">Institute</label>
+                <input type="text" name="institute" id="institute" placeholder="USMS Bhitshah">
+                <label for="year">Year</label>
+                <input type="text" name="year" id="year" placeholder="2025">
+                <button type="button" onclick="addEducation()">Add</button>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td>Degree</td>
+                            <td>Institute</td>
+                            <td>Year</td>
+                            <td>Action</td>
+                        </tr>
+                    </thead>
+                    <tbody id="edu_preview"></tbody>
+                </table>
+            </div>
+            <div class="buttonArea">
+                <button type="button" onclick="nextSection('area_4', 'area_5')">Back</button>
+                <button type="button" onclick="nextSection('area_6', 'area_5')">Next</button>
+            </div>
+
+
+        </div>
+        <div id="area_6" class="hidden">
+            <h2 style="font-size: 30px; color: white; font-family: 'Outfit';">Experience</h2>
+            <div class="input_area">
+                <label for="title">Job Title</label>
+                <input type="text" name="role" id="role" placeholder="Web Developer">
+                <label for="company">Company</label>
+                <input type="text" name="company" id="company" placeholder="GIAIC">
+                <label for="months">No. of Months</label>
+                <input type="text" name="months" id="months" placeholder="12">
+
+                <label for="responsibilities">Responsibilities</label>
+                <textarea id="responsibilities"></textarea>
+                <button type="button" onclick="addExperience()">Add</button>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td>Role</td>
+                            <td>Company</td>
+                            <td>Months</td>
+                            <td>Action</td>
+                        </tr>
+                    </thead>
+                    <tbody id="exp_preview"></tbody>
+                </table>
+            </div>
+            <div class="buttonArea">
+                <button type="button" onclick="nextSection('area_5', 'area_6')">Back</button>
+                <button type="button" onclick="nextSection('area_7', 'area_6')">Next</button>
+            </div>
+
+
+        </div>
+        <div id="area_7" class="hidden">
+            <div class="input_area">
+                <label for="skills">Skills</label>
+                <textarea name="skills" id="skills" rows="3" cols="6"
+                    placeholder="Web Development, Graphic Design"></textarea>
+            </div>
+            <div class="input_area">
+                <label for="certificates">Certificates</label>
+                <textarea name="certificates" id="certificates" rows="3" cols="6"
+                    placeholder="Generative AI Fundamentals, Data Anlaysis with Google"></textarea>
+            </div>
+            <div class="buttonArea">
+                <button type="button" onclick="nextSection('area_6', 'area_7')">Back</button>
+                <button type="button" onclick="nextSection('area_8', 'area_7')">Next</button>
+            </div>
+        </div>
+        <div id="area_8" class="hidden">
+            <div class="input_area">
+                <img id="img_preview" src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Image Preview" />
+                <label for="image">Upload Image</label>
+                <input type="file" accept=".jpg, .jpeg, .png" name="image" id="image" onchange="setImage()" />
+            </div>
+            <div class="buttonArea">
+                <button type="button" onclick="nextSection('area_7', 'area_8')">Back</button>
+                <button type="button" class="final" onclick="generateResume()">Generate Resume</button>
+            </div>
+        </div>
+        <div id="area_9" class="hidden">
+            <div class="input_area">
+                <label>Select Template</label>
+                <div class="cards_section" style="gap: 1px;">
+                    <a href="/resume/template1.html" class="cards" style="border: none; cursor: pointer;">
+                        <img width="200px" height="300px" style="object-fit: cover;" src="/assets/cv1.jpg" />
+                    </a>
+                    <a href="/resume/template2.html" class="cards" style="border: none; cursor: pointer">
+                        <img width="200px" height="300px" style="object-fit: cover;" src="/assets/cv2.jpg" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="area_10" class="hidden">
+            <div class="input_area">
+                <label>Select Template</label>
+                <div class="cards_section" style="gap: 1px;">
+                    <a href="/resume/template1.html?editByUser=true" class="cards" style="border: none; cursor: pointer;">
+                        <img width="200px" height="300px" style="object-fit: cover;" src="/assets/cv1.jpg" />
+                    </a>
+                    <a href="/resume/template2.html?editByUser=true" class="cards" style="border: none; cursor: pointer">
+                        <img width="200px" height="300px" style="object-fit: cover;" src="/assets/cv2.jpg" />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    if(window.location.search){
+        let areaValue = new URLSearchParams(window.location.search).get('show');
+        nextSection(areaValue, 'area_1');
+    }
+</script>
+</html>

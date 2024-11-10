@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Faculty+Glyphic&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+:root{
+    --primary: rgb(3, 3, 82);
+    --lightwhite: #FFFBFB;
+    --lightdark: rgb(2, 2, 58);
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+body{
+    background-color: rgb(48, 48, 48);
+}
+nav{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(48, 48, 48);
+}
+nav h1{
+    
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+}
+nav .buttonArea{
+    display: flex;
+    gap: 10px;
+}
+
+nav .buttonArea button{
+    padding: 10px 40px;
+    
+    color: black;
+    font-family: "Outfit";
+    font-size: 20px;
+    border: 2px solid transparent;
+    outline: none;
+}
+nav .buttonArea button:hover{
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+#resume{
+    width: 216mm; /* Width of U.S. Letter */
+    min-height: 279mm; /* Minimum height of U.S. Letter */
+    margin: 0 auto;
+    background-color: white;
+}
+
+#main_content{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+}
+
+/* Left Area */
+#main_content .left_area{
+    grid-column: span 3;
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.img_section{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img_section img{
+    border-radius: 0px;
+}
+
+.section{
+    border-top: 5px solid white;
+    padding: 20px;
+}
+
+.heading_area_secondary{
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+.heading_area_secondary h1{
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    font-family: "Outfit";
+}
+.heading_area_secondary .line{
+    height: 5px;
+    background-color: white;
+    border-radius: 10px;
+    width: 70%;
+}
+.heading_area_primary{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+}
+.heading_area_primary h2{
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--primary);
+    font-family: "Outfit";
+}
+.heading_area_primary h3{
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: var(--primary);
+    font-family: "Hubot Sans";
+}
+.heading_area_primary .line{
+    height: 5px;
+    background-color: var(--primary);
+    border-radius: 10px;
+    width: 40%;
+}
+
+.contact_list{
+    list-style-type: none;
+    padding: 20px 10px;
+    color: white;
+}
+.contact_list li{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 10px 0px;
+    font-size: 15px;
+    line-break: anywhere;
+}
+.contact_list li img{
+    background-color: white;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.content {
+    padding: 10px 0px;
+    font-size: 18px;
+    font-family: "Lato";
+    word-spacing: 2px;
+    
+}
+/* Right Area */
+#main_content .right_area{
+    grid-column: span 5;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+#skills, #certificates{
+    margin: 5px 40px;
+    list-style-type: decimal-leading-zero;
+}
+#skills li, #certificates li{
+    font-family: "Lato";
+    font-size: 20px;
+    padding: 5px;
+}
+
+.name_area{
+    padding: 30px 0px;
+}
+
+.name_area h1{
+    font-size: 80px;
+    color: black;
+    font-family: "Outfit";
+}
+
+.mini_card{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+}
+
+.mini_card h2{
+    font-family: "Hubot Sans";
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+.mini_card p:nth-child(2){
+    font-family: "Lato";
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(48, 48, 48);
+}

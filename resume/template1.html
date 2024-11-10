@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/resume.css">
+    <script src="/script/resume.js"></script>
+    <title>Resume Editor - ResumLine!</title>
+</head>
+
+<body>
+    <nav>
+        <h1 onclick="window.location.assign('/')">ResumLine</h1>
+        <div class="buttonArea">
+            <button id="editingbtn" popoverTarget="popup" onclick="enableEditing()">Enable Editing</button>
+            <button id="editingprobtn" onclick="enableproEditing()">Enable Pro Editing</button>
+            <button id="editingprobtn" onclick="generatePDF()">Download</button>
+            <button id="editingprobtn" onclick="clearData()">Clear Data</button>
+
+        </div>
+    </nav>
+    <div id="resume">
+        <div id="intro_area">
+            <div class="name_area">
+                <h1 id="name">Name</h1>
+                <h2 id="role">Role</h2>
+            </div>
+            <div class="img_section">
+                <img id="pic" src="https://cdn-icons-png.flaticon.com/512/149/149071.png" />
+            </div>
+        </div>
+
+        <div id="main_content">
+            <div class="left_area">
+                <div class="givememargin">
+                    <ul class="contact_list">
+                        <li><img src="https://www.svgrepo.com/show/474032/call.svg" width="25px" height="25px" alt="logo" /> <span id="phone">Mobile Number</span></li>
+                        <li><img src="https://www.svgrepo.com/show/474042/email.svg" width="25px" height="25px" alt="logo" /> <span id="email">Email</span></li>
+                        <li><img src="https://www.svgrepo.com/show/474056/home-door.svg" width="25px" height="25px" alt="logo" /> <span id="address">Address</span></li>
+                        <li><img src="https://www.svgrepo.com/show/474067/message.svg" width="25px" height="25px" alt="logo" /> <span id="portfolio_url">Portfolio url</span></li>
+                        <li><img src="https://www.svgrepo.com/show/453962/linkedin.svg" width="25px" height="25px" alt="logo" /> <span id="linkedin">Linkedin URL</span></li>
+                    </ul>
+                </div>
+                <div class="givememargin">
+                    <h1 class="section_heading">EDUCATION</h1>
+                    <div id="education">
+
+                    </div>
+                </div>
+                <div class="givememargin">
+                    <h1 class="section_heading">SKILLS</h1>
+                    <ul id="skills">
+
+                    </ul>
+                </div>
+                <div class="givememargin">
+                    <h1 class="section_heading">REFERENCE</h1>
+                    <P class="content">Will be available</P>
+                </div>
+            </div>
+            <div class="right_area">
+                <div class="givememargin">
+                    <h1 class="section_heading">PROFILE</h1>
+                    <p class="content" id="summary"></p>
+                </div>
+
+                <div class="givememargin">
+                    <h1 class="section_heading">EXPERIENCE</h1>
+                    <div id="experience">
+
+                    </div>
+                </div>
+                <div class="givememargin">
+                    <h1 class="section_heading">CERTIFICATES</h1>
+                    <ul id="certificates">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</html>

@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 })
 
-
 // Eduation & Experience Data
 let education: [{ degree: string, institute: string, year: string }] = [{ degree: "", institute: "", year: "" }];
 
