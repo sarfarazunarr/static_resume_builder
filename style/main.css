@@ -294,6 +294,14 @@ footer {
     justify-content: space-between;
     align-items: center;
 }
+.security_note{
+    text-align: center;
+    color: white;
+    font-family: "Inter";
+    font-size: 20px;
+    width: 40vw;
+
+}
 #formArea button[type="button"] {
     padding: 10px 40px;
     background-color: white;
@@ -487,5 +495,10 @@ footer {
     }
     #formArea button[type="button"]{
         padding: 10px 20px;
+    }
+    .security_note{
+        width: 70vw;
+        font-size: 15px;
+
     }
 }
